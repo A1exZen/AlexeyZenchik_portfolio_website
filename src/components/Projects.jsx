@@ -43,6 +43,8 @@ const Projects = () => {
 		</section>
 	);
 };
+
+
 export const ProjectCard = ({ project }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -64,7 +66,7 @@ export const ProjectCard = ({ project }) => {
 					onClick={() => {
 						setIsOpen(true);
 					}}
-					className='w-[80%] absolute translate-y-20  hover:translate-y-0 hover:rotate-6 transition-all duration-[350ms] rounded-[0.4rem]'
+					className='w-[85%] h-[auto] absolute translate-y-20  hover:translate-y-0 hover:rotate-6 transition-all duration-[350ms] rounded-[0.5rem]'
 				/>
 			</div>
 			<div className='my-[1.6rem]'>
@@ -111,7 +113,7 @@ export const ProjectCard = ({ project }) => {
 					</a>
 				</div>
 				<div className='relative w-fit'>
-					<div className=' flex flex-wrap gap-[1.5rem] text-[length:--text-xs] text-[--brand] my-[0.8rem] '>
+					<div className=' flex flex-wrap gap-x-[2.5rem] gap-y-[0.5rem] text-[length:--text-xs] text-[--brand] my-[0.8rem] '>
 						{project.tech.map((item, i)=>(
 							<span key={i}>{item}</span>
 						))}

@@ -34,7 +34,7 @@ const Header = () => {
 	return (
 		<header
 			style={{ backdropFilter: 'blur(12px)' }}
-			className={`z-[20] p-6 xs:pl-[10rem] xs:pr-[5rem] fixed w-full flex justify-between xs:py-6 items-center font-[500] text-[--text-md] bg-[var(--bg-opaque)]`}
+			className={`z-[20] p-1 xs:pl-[10rem] xs:pr-[5rem] fixed w-full flex justify-between xs:py-6 items-center font-[500] text-[--text-md] bg-[var(--bg-opaque)]`}
 		>
 			<div className='flex-1 flex gap-[1.6rem] items-center'>
 				<a
@@ -132,7 +132,7 @@ const Header = () => {
 					duration: 0.3,
 					type: 'easeInOut',
 				}}
-				className=' py-[1rem] xs:px-[2rem] px-[1rem] border border-[var(--brand)] bg-transparent rounded-sm text-[var(--brand)] text-[length:var(--text-xs)] relative z-20 transition-colors duration-200
+				className=' py-[0.7rem] xs:px-[1rem] px-[1rem] border border-[var(--brand)] bg-transparent rounded-sm text-[var(--brand)] text-[length:var(--text-xs)] relative z-20 transition-colors duration-200
 			'
 			>
 				My resume

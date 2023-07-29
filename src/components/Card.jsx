@@ -10,7 +10,7 @@ const Card = ({ setIsOpen, project }) => {
 
 	const variants = {
 		initial: (direction) => {
-			return { x: direction > 0 ? 200 : -200, opacity: 0};
+			return { x: direction > 0 ? 200 : -200, opacity: 0 };
 		},
 		animate: {
 			x: 0,
@@ -22,12 +22,15 @@ const Card = ({ setIsOpen, project }) => {
 			// }
 		},
 		exit: (direction) => {
-			return { x: direction > 0 ? -200 : 200, opacity: 0,transition: 'ease-in',
-			// 	 transition:{
-			// 	x: {type: 'spring', stiffness: 300, damping: 20},
-			// 	opacity: {duration: 0.2},
-			// } 
-		};
+			return {
+				x: direction > 0 ? -200 : 200,
+				opacity: 0,
+				transition: 'ease-in',
+				//  transition:{
+				// x: {type: 'spring', stiffness: 300, damping: 20},
+				// opacity: {duration: 0.1},
+				// }
+			};
 		},
 	};
 	const nextStep = () => {
@@ -112,7 +115,7 @@ const Card = ({ setIsOpen, project }) => {
 					</div>
 					<div className='p-[2.4rem]'>
 						<h4 className='text-[length:--text-lg]'>{title}</h4>
-						<div className='flex flex-wrap gap-[1.2rem] text-[length:--text-xs] text-[--brand] mt-[0.2rem] mb-[2.4rem]'>
+						<div className='flex flex-wrap gap-[2rem] text-[length:--text-xs] text-[--brand] mt-[0.2rem] mb-[2.4rem]'>
 							{tech.map((item, i) => (
 								<span key={i}>{item}</span>
 							))}
