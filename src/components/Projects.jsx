@@ -57,7 +57,7 @@ export const ProjectCard = ({ project }) => {
 	return (
 		<div>
 			<div
-				className=' flex justify-center items-center w-full bg-[--background-light] relative cursor-pointer rounded-xl overflow-hidden'
+				className='flex justify-center items-center w-full bg-[--background-light] relative cursor-pointer rounded-xl overflow-hidden'
 				style={{ aspectRatio: '16/9' }}
 			>
 				<img
@@ -66,7 +66,7 @@ export const ProjectCard = ({ project }) => {
 					onClick={() => {
 						setIsOpen(true);
 					}}
-					className='w-[85%] h-[auto] absolute translate-y-20  hover:translate-y-0 hover:rotate-6 transition-all duration-[350ms] rounded-[0.5rem]'
+					className='w-[85%] h-[auto] absolute translate-y-20  hover:scale-[1.05] hover:translate-y-10 hover:rotate-3 transition-all duration-[350ms] rounded-[0.5rem]'
 				/>
 			</div>
 			<div className='my-[1.6rem]'>
