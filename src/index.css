@@ -40,7 +40,7 @@
 
 .section-wrapper {
 	@apply max-w-[1250px] mx-auto xs:p-[9.5rem]
-	py-[7rem] px-[3rem] overflow-hidden relative sm:mb-[9.5rem]
+	py-[7rem] px-[3rem] overflow-hidden relative sm:mb-[5.5rem];
 }
 
 .text-gradient {

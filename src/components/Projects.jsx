@@ -3,8 +3,7 @@ import Card from './Card';
 import { motion } from 'framer-motion';
 import { zoomOut } from '../utils/motion';
 
-
-import { projects } from '../constants';
+import { projects, bestProjects } from '../constants';
 
 const Projects = () => {
 	return (
@@ -35,17 +34,21 @@ const Projects = () => {
 					<span className='text-[var(--brand)] text-[length:--text-xl]'>.</span>
 				</motion.h3>
 			</div>
+			<div className='md:p-10 mb-10 '>
+				{bestProjects.map(project => (
+					<ProjectCard key={project.title} project={project} big={true} />
+				))}
+			</div>
 			<div className='grid sm:grid-cols-[1fr_1fr] gap-[3.2rem]'>
-				{projects.map((project) => (
-					<ProjectCard key={project.title} project={project} />
+				{projects.map(project => (
+					<ProjectCard key={project.title} project={project} big={false} />
 				))}
 			</div>
 		</section>
 	);
 };
 
-
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ project, big }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	if (isOpen) {
@@ -66,7 +69,7 @@ export const ProjectCard = ({ project }) => {
 					onClick={() => {
 						setIsOpen(true);
 					}}
-					className='w-[85%] h-[auto] absolute translate-y-20  hover:scale-[1.05] hover:translate-y-10 hover:rotate-3 transition-all duration-[350ms] rounded-[0.5rem]'
+					className='w-[85%] h-[auto] absolute translate-y-20  hover:scale-[1.05] hover:translate-y-10  transition-all duration-[350ms] rounded-[0.5rem]'
 				/>
 			</div>
 			<div className='my-[1.6rem]'>
@@ -94,7 +97,7 @@ export const ProjectCard = ({ project }) => {
 						</svg>
 					</a>
 					<a
-					alt='live'
+						alt='live'
 						target='_blank'
 						href={project.live}
 						className='opacity-75 transition-opacity duration-75'
@@ -114,14 +117,16 @@ export const ProjectCard = ({ project }) => {
 				</div>
 				<div className='relative w-fit'>
 					<div className=' flex flex-wrap gap-x-[2.5rem] gap-y-[0.5rem] text-[length:--text-xs] text-[--brand] my-[0.8rem] '>
-						{project.tech.map((item, i)=>(
+						{project.tech.map((item, i) => (
 							<span key={i}>{item}</span>
 						))}
 					</div>
 				</div>
 				<div className='relative w-fit '>
 					<p className='font-[200]'>
-						{project.desc.length > 155 ? project.desc.substring(0, 155) + "..." : project.desc}
+						{project.desc.length > 155
+							? project.desc.substring(0, 155) + '...'
+							: project.desc}
 						<span
 							onClick={() => setIsOpen(true)}
 							className='cursor-pointer inline-block text-[length:--text-xs] font-[400] text-[--brand] ml-3 hover:underline'

@@ -1,12 +1,34 @@
-import { useState } from 'react';
+import React, { useRef, useState } from 'react'
 import { close, menu } from '../assets';
 import { navLinks } from '../constants';
 const Navbar = () => {
 	const [active, setActive] = useState('Home');
 	const [toggle, setToggle] = useState(false);
+	
 	const toggleModal = () => {
 		setToggle(!toggle);
 	};
+	const handleScroll = () => {
+		navLinks.forEach((item) => {
+			const section = document.getElementById(item.id);
+			if (section) {
+				const sectionTop = section.getBoundingClientRect().top;
+				
+				// Условие для активации элемента навбара
+				if (sectionTop >= 0 && sectionTop < window.innerHeight / 2) {
+					setActive(item.title);
+				}
+			}
+		});
+	};
+	
+	React.useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 	//----------------------------------------------------------------
 	return (
 		<nav className='hidden bg-[var(--background-dark)] fixed h-[100vh] top-0 left-0 z-30 xs:flex flex-col items-center'>

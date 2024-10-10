@@ -3,12 +3,13 @@ import { zoomOut } from '../utils/motion';
 
 const data = [
 	{
-		companyName: 'Freelance',
-		position: 'Web Developer',
+		companyName:
+			'Belarusian State University of Informatics and Radioelectronics',
+		position: 'Student',
 		location: 'Minsk, Belarus',
 		description: '',
-		year: '05/2023 - present',
-		tech: ['ReactJS', 'NextJS', 'TailwindCSS', 'Framer Motion', 'Figma'],
+		year: '09/2022 - present',
+		tech: [],
 	},
 	{
 		companyName: 'IT Overone',
@@ -16,7 +17,7 @@ const data = [
 		location: 'Minsk, Belarus',
 		description: '',
 		year: '03/2023 - 05/2023',
-		tech:[]
+		tech: [],
 	},
 	{
 		companyName: 'IT Overone',

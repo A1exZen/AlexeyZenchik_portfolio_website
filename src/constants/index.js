@@ -3,6 +3,7 @@ import { mainHoobank, hero, payMetods } from '../assets/hoobank';
 import { possibilities, heroGPT3, mobileGPT3 } from '../assets/gpt-3';
 import { main3D, overview, projects3D } from '../assets/3D-portfolio';
 import { mainSumm, heroSumm, summ } from '../assets/ai-summarize';
+import { mainStock, regStock } from '../assets/your-stock'
 import { mainBrella, stat } from '../assets/brella';
 
 export const navLinks = [
@@ -28,13 +29,56 @@ export const navLinks = [
 	},
 ];
 
+const useAtWorkSkills = [
+	'JavaScript',
+	'HTML',
+	'CSS',
+	'ReactJS',
+	'NextJS',
+	'TailwindCSS',
+	'SCSS',
+	'Framer Motion',
+	'NodeJS',
+	'ExpressJS',
+	'MongoDB',
+	'Mongoose',
+	'TypeScript',
+	'Figma',
+	'Git',
+	'Firebase',
+];
+const otherSkills = [
+	'ReduxToolkit',
+	'C++',
+	'PostgreSQL',
+	'MySQL',
+	'Java',
+	'UX-UI',
+	'OOP',
+	'Creativity',
+	'Problem-Solving',
+];
+
+const bestProjects = [
+	{
+		title: 'Your Stock ',
+		tech: ['ReactJS', 'MongoDB', 'NodeJS','ExpressJS', 'ReduxToolkit', 'Firebase'],
+		desc: 'Product accounting system | Russian edition',
+		desc2:
+			'An automated system for accounting the output of products at the enterprise.It facilitates the recording and processing of data, reduces the time required for processing documents and summarizing information for the analysis of trading activities.',
+		images: [`${mainStock}`, `${regStock}`],
+		live: '#',
+		github: '#'
+	},
+];
+
 const projects = [
 	{
-		title: 'Hoobank',
-		tech: ['ReactJS', 'TailwindCSS', 'Responsive', 'Framer Motion'],
-		desc: 'HooBank is a modern and user-friendly web application built using ReactJS and Tailwind CSS.',
+		title: 'Hooband',
+		tech: ['ReactJS', 'TailwindCSS', 'Responsive '],
+		desc: 'Modern and animated webside',
 		desc2:
-			"HooBank is a modern and user-friendly web application built using ReactJS and Tailwind CSS. Whether you're on your desktop or mobile device, HooBank's responsive design ensures that you can access your finances anytime, anywhere.",
+			'modern landing page with animations and adaptive design',
 		images: [`${mainHoobank}`, `${hero}`, `${payMetods}`],
 		live: 'https://hoobank-az.vercel.app/',
 		github: 'https://github.com/A1exZen/hoobank-website',
@@ -94,4 +138,4 @@ const projects = [
 	},
 ];
 
-export { projects };
+export { projects, otherSkills, useAtWorkSkills, bestProjects };
