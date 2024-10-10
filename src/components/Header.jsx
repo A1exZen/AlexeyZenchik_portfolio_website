@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import resume from '../../public/Alexey Zenchik.pdf';
+import resume from '../../public/AlexeyZenchik.pdf';
 const Header = () => {
 	//----------------------------------------------------------------
 	const draw = {
