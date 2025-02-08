@@ -8,7 +8,7 @@ export const textVariant = () => {
 			y: 0,
 			opacity: 1,
 			transition: {
-				type: 'spring',
+				type: "spring",
 				duration: 1.25,
 			},
 		},
@@ -18,8 +18,8 @@ export const textVariant = () => {
 export const fadeIn = (direction, type, delay, duration) => {
 	return {
 		hidden: {
-			x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-			y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
+			x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+			y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
 			opacity: 0,
 		},
 		show: {
@@ -30,16 +30,16 @@ export const fadeIn = (direction, type, delay, duration) => {
 				type: type,
 				delay: delay,
 				duration: duration,
-				ease: 'easeOut',
+				ease: "easeOut",
 			},
 		},
 	};
 };
-export const fadeInChild = (direction) => {
+export const fadeInChild = direction => {
 	return {
 		hidden: {
-			x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-			y: direction === 'up' ? 50 : direction === 'down' ? -50 : 0,
+			x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+			y: direction === "up" ? 50 : direction === "down" ? -50 : 0,
 			opacity: 0,
 		},
 		show: {
@@ -59,30 +59,30 @@ export const zoomIn = (delay, duration) => {
 			scale: 1,
 			opacity: 1,
 			transition: {
-				type: 'tween',
+				type: "tween",
 				delay: delay,
 				duration: duration,
-				ease: 'easeOut',
+				ease: "easeOut",
 			},
 		},
 	};
 };
-export const zoomOut = (direction, delay, duration ) => {
+export const zoomOut = (direction, delay, duration) => {
 	return {
 		hidden: {
-			x: direction === 'left' ? 70 : direction === 'right' ? -70 : 0,
+			x: direction === "left" ? 70 : direction === "right" ? -70 : 0,
 			scale: 1.5,
 			opacity: 0,
 		},
 		show: {
-			x:0,
+			x: 0,
 			scale: 1,
 			opacity: 1,
 			transition: {
-				type: 'tween',
+				type: "tween",
 				delay: delay,
 				duration: duration,
-				ease: 'easeOut',
+				ease: "easeOut",
 			},
 		},
 	};
@@ -91,8 +91,8 @@ export const zoomOut = (direction, delay, duration ) => {
 export const slideIn = (direction, type, delay, duration) => {
 	return {
 		hidden: {
-			x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
-			y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
+			x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
+			y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
 		},
 		show: {
 			x: 0,
@@ -101,16 +101,16 @@ export const slideIn = (direction, type, delay, duration) => {
 				type: type,
 				delay: delay,
 				duration: duration,
-				ease: 'easeOut',
+				ease: "easeOut",
 			},
 		},
 	};
 };
-export const slideInChild = (direction) => {
+export const slideInChild = direction => {
 	return {
 		hidden: {
-			x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
-			y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
+			x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
+			y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
 		},
 		show: {
 			x: 0,

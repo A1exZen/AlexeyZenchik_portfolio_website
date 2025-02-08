@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
 	textVariant,
 	zoomOut,
@@ -6,9 +6,9 @@ import {
 	zoomIn,
 	slideIn,
 	staggerContainer,
-} from '../utils/motion';
+} from "../utils/motion";
 
-import { useAtWorkSkills, otherSkills } from '../constants';
+import { useAtWorkSkills, otherSkills } from "../constants";
 
 const About = () => {
 	return (
@@ -20,10 +20,10 @@ const About = () => {
 					}}
 					whileInView={{
 						opacity: 1,
-						width: '100%',
+						width: "100%",
 					}}
 					transition={{
-						duration: '1',
+						duration: "1",
 					}}
 					viewport={{ once: true }}
 					className='w-[50px] h-[1px] bg-[var(--text)] opacity-30'
@@ -32,7 +32,7 @@ const About = () => {
 					initial='hidden'
 					whileInView='show'
 					viewport={{ once: true }}
-					variants={zoomOut('right', 0.2, 0.4)}
+					variants={zoomOut("right", 0.2, 0.4)}
 					className='text-[length:--text-xl] font-[900] text-end'
 				>
 					About
@@ -49,7 +49,9 @@ const About = () => {
 					>
 						<p className='mb-[2.5rem] font-[200] flex flex-col gap-12 md:gap-10 text-justify'>
 							<p>
-								I'm a 3rd year student of the IT University, I have solid knowledge in the field of interface technologies and a flair for design
+								I'm a 3rd year student of the IT University, I have solid
+								knowledge in the field of interface technologies and a flair for
+								design
 							</p>
 							<p>
 								I strive for quality and precision in my work and I am always
@@ -181,7 +183,7 @@ const About = () => {
 						>
 							{useAtWorkSkills.map((item, i) => (
 								<motion.span
-									variants={fadeInChild('left')}
+									variants={fadeInChild("left")}
 									key={i}
 									className='text-[length:--text-xs] bg-[--background-light] px-[1.5rem] py-[0.5rem] rounded-full'
 								>
@@ -217,7 +219,7 @@ const About = () => {
 						>
 							{otherSkills.map((item, i) => (
 								<motion.span
-									variants={fadeInChild('left')}
+									variants={fadeInChild("left")}
 									key={i}
 									className='text-[length:--text-xs] bg-[--background-light] px-[1.5rem] py-[0.5rem] rounded-full'
 								>
