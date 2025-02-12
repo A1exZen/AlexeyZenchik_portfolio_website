@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
-import resume from '../assets/AlexeyZenchik.pdf';
+import { motion } from "framer-motion";
+import resume from "../assets/Resume.pdf";
 const Header = () => {
 	//----------------------------------------------------------------
 	const draw = {
 		hidden: { pathLength: 0, opacity: 0 },
-		visible: (i) => {
+		visible: i => {
 			const delay = 1 + i * 0.5;
 			return {
 				pathLength: 1,
 				opacity: 1,
 				transition: {
-					pathLength: { delay, type: 'spring', duration: 1.5, bounce: 0 },
+					pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
 					opacity: { delay, duration: 0.01 },
 				},
 			};
@@ -22,18 +22,18 @@ const Header = () => {
 			y: 0,
 		},
 		hover: {
-			fill: 'var(--brand)',
+			fill: "var(--brand)",
 			y: -5,
 			transition: {
 				duration: 0.4,
-				type: 'spring',
+				type: "spring",
 			},
 		},
 	};
 
 	return (
 		<header
-			style={{ backdropFilter: 'blur(12px)' }}
+			style={{ backdropFilter: "blur(12px)" }}
 			className={`z-[20] p-1 xs:pl-[10rem] xs:pr-[5rem] fixed w-full flex justify-between xs:py-6 items-center font-[500] text-[--text-md] bg-[var(--bg-opaque)]`}
 		>
 			<div className='flex-1 flex gap-[1.6rem] items-center'>
@@ -125,12 +125,12 @@ const Header = () => {
 				href={resume}
 				target='blank'
 				whileHover={{
-					backgroundColor: 'var(--brand)',
-					color: 'black',
+					backgroundColor: "var(--brand)",
+					color: "black",
 				}}
 				transition={{
 					duration: 0.3,
-					type: 'easeInOut',
+					type: "easeInOut",
 				}}
 				className=' py-[0.7rem] xs:px-[1rem] px-[1rem] border border-[var(--brand)] bg-transparent rounded-sm text-[var(--brand)] text-[length:var(--text-xs)] relative z-20 transition-colors duration-200
 			'
