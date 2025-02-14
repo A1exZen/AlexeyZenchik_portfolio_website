@@ -36,7 +36,7 @@ const data = [
 		location: 'Minsk, Belarus',
 		description: '',
 		year: '03/2023 - 05/2023',
-		tech: [],
+		tech: ['HTML', 'CSS/SCSS','TailwindCSS', 'JavaScript', 'ReactJS'],
 	},
 	{
 		companyName: 'IT Overone',
@@ -44,7 +44,7 @@ const data = [
 		location: 'Minsk, Belarus',
 		description: '',
 		year: '09/2022 - 03/2023',
-		tech: ['HTML', 'CSS', 'SCSS', 'Javascript', 'ReactJS'],
+		tech: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'ReactJS'],
 	},
 	{
 		companyName: 'Computer Academy STEP',
