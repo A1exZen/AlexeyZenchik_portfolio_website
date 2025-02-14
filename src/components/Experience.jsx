@@ -4,6 +4,25 @@ import { zoomOut } from '../utils/motion';
 const data = [
 	{
 		companyName:
+			'AI-Powered Website Analyzer',
+		position: 'Software Developer',
+		location: 'Minsk, Belarus',
+		description: 'Built an AI-driven web application that analyzes a given website link and generates insights based on its structure, SEO,\n' +
+			'performance, and accessibility using OpenAI API.',
+		year: '09/2024 - 02/2025',
+		tech: ['React', 'TypeScript', 'Tailwind CSS', 'OpenAI API', 'Node.js', 'Zustand', 'Recharts', 'ExpressJS'],
+	},
+	{
+		companyName:
+			'Freelance',
+		position: 'Frontend Developer',
+		location: 'Minsk, Belarus',
+		description: 'Developed E-commerce platforms, dashboards, and custom web apps for clients, focusing on performance and user exp..',
+		year: '05/2024 - present',
+		tech: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Zustand', 'shadcn/ui', 'Firebase'],
+	},
+	{
+		companyName:
 			'Belarusian State University of Informatics and Radioelectronics',
 		position: 'Student',
 		location: 'Minsk, Belarus',
